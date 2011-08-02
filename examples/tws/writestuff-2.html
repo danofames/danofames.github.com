@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>document.write wrestled to the ground</title>
+    <script type="text/javascript" src="js/thewritestuff.js"></script>
+    <style type="text/css">
+        #writestuff-block {
+            padding:20px;
+            border:2px solid #CCC;
+            font-family:"Helvetica Neue", Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div id="writestuff-block"></div>
+    <script type="text/javascript">
+        Writes.waitingToWrite.push(function() {
+            new Write('<scr'+'ipt type="text/javascript" src="js/inconsideratead2.js"></scr'+'ipt>',
+                document.getElementById('writestuff-block'));
+    });
+    </script>
+</body>
+</html>

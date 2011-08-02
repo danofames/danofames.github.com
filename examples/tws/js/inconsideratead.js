@@ -1,0 +1,1 @@
+document.write('<p><a href="http://www.tablethotels.com/plus"><img src="img/1312203313.jpeg" /></a></p>');

@@ -1,10 +1,10 @@
 ---
 layout: default
-title: 
+title: archives
 ---
 
 <ul>
-{% for post in site.posts limit:3 %}
+{% for post in site.posts %}
     <li>{{ post.date | date_to_string }} <a href="{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
 </ul>

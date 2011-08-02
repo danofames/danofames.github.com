@@ -1,0 +1,9 @@
+* { margin:1em 0; padding:0; }
+body {
+    width:600px;
+    margin:0 auto; padding:40px 220px 40px 0;
+    font-family:"Helvetica Neue", Arial, sans-serif;
+}
+p, li {
+    font-size:14px; line-height:18px;
+}
