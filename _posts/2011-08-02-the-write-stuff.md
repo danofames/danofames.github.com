@@ -51,3 +51,4 @@ Throw nested `<script>`'s inside the `document.write`'s, [and it still has the r
 
 It works by storing the strings sent to `document.write` in an array, keyed by containing object. Each time a string contains a `<script>`, the element is appended to the containing element, and the result of the `<script>` is captured and it's place in the queue of stuff to be appended to the containing element is replaced by the output. When there are no more `<script>`s left, the string is appended to the original containing element.
 
+The most enjoyable, maybe entertaining, code can come in an ugly but delightfully unique solution to a difficult problem. Or something like that.
