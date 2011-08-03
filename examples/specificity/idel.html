@@ -1,26 +1,42 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Matt's question</title>
-		<style type="text/css">
-			#thiselement {
-				color:pink;
-			}
-			div.thiselement {
-				color:blue;
-			}
-		</style>
-	</head>
-	<body>
-		<pre id="thiselement" class="thiselement">
-			<code>
-				#thiselement {
-        				color:pink;
-				}
-				div.thiselement {
-        				color:blue;
-				}
-			</code>
-		</pre>
-	</body>
+    <head>
+        <title>id or element</title>
+        <style type="text/css">
+            #thiselement {
+                color:pink;
+            }
+            pre.thiselement {
+                color:blue;
+            }
+            pre#thatelement {
+                color:purple;
+            }
+            #thatelement {
+                color:pink;
+            }
+        </style>
+    </head>
+    <body>
+        <pre id="thiselement" class="thiselement">
+            <code>
+                #thiselement {
+                    color:pink;
+                }
+                pre.thiselement {
+                    color:blue;
+                }
+            </code>
+        </pre>
+        <pre id="thatelement" class="thatelement">
+            <code>
+                pre#thatelement {
+                    color:purple;
+                }
+                #thatelement {
+                    color:pink;
+                }
+            </code>
+        </pre>
+    </body>
 </html>
