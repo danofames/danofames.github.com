@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <title>dan, of ames {{ page.title }}</title>
+        <title>dan, of ames{% if page.title %}:{% endif %} {{ page.title }}</title>
         <link rel="stylesheet" href="/css/base.css" type="text/css" />
         <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
     </head>
