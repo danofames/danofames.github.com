@@ -7,9 +7,27 @@ body {
 p, li {
     font-size:14px; line-height:18px;
 }
-div.post {
+h1, h2, h3, h4, h5 {
+    color:#808080;
+}
+h1 {
+    font-size:140%;
+}
+h2 {
+    font-size:130%;
+}
+h3, h4, h5 {
+    font-size:120%;
+}
+article {
     padding-right:220px;
 }
-div.post pre {
+article pre {
     overflow:auto;
+}
+a, a:visited {
+    color:#000080;
+}
+a:hover {
+    color:#006080;
 }
