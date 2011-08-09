@@ -3,7 +3,7 @@ layout: post
 title: the write stuff
 ---
 
-Many a developer looking to improve the front-end peformance of a site has found there way to the worst performing block of code on the site:
+Many a developer looking to improve the front-end peformance of a site has found their way to the worst performing block of code on the site:
 
 {% highlight html %}
 <div class="adblock">
@@ -15,7 +15,7 @@ Many a developer looking to improve the front-end peformance of a site has found
 
 A fair number of naive but smart developers have responded with, "`document.write` is serving no useful purpose on *my* site, I'll overwite the function and figure out how to defer loading that script."
 
-And several brave developers have been lost down this path, finding the contents of the `<script>`:
+And several brave developers have been lost down this path, finding the contents of the `<script>` to be:
 
 {% highlight js %}
 document.write('<p><a href="http://adnetwork.example/click"><img src="someimage.jpg" /></a>');
@@ -35,7 +35,7 @@ thewritestuff.js allows you turn [this](/examples/tws/wrongstuff.html):
 </div>
 {% endhighlight %}
 
-To [this](/examples/tws/writestuff.html):
+to [this](/examples/tws/writestuff.html):
 
 {% highlight html %}
 <div id="writestuff-block"></div>
