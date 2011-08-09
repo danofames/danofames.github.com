@@ -14,7 +14,7 @@ h1 {
     font-size:140%;
 }
 h2 {
-    font-size:130%;
+    font-size:120%;
 }
 h3, h4, h5 {
     font-size:120%;
@@ -26,8 +26,8 @@ article pre {
     overflow:auto;
 }
 a, a:visited {
-    color:#000080;
+    color:#006080;
 }
 a:hover {
-    color:#006080;
+    color:#0086B3;
 }
