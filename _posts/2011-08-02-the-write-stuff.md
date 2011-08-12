@@ -21,7 +21,7 @@ And several brave developers have been lost down this path, finding the contents
 document.write('<p><a href="http://adnetwork.example/click"><img src="someimage.jpg" /></a>');
 {% endhighlight %}
 
-One weekend in Philadelphia, a Tablet front end developer, [Matthew Story](https://github.com/matthewstory/), had enough and [thewritestuff.js (yet to be posted)](https://github.com/tablet/thewritestuff) emerged. A js library that wrestles `document.write` and wins. Though not necessarily a good idea, this has been in use without (significant) issue on [tablethotels.com](http://www.tablethotels.com) for several years.
+One weekend in Philadelphia, a Tablet front end developer, [Matthew Story](https://github.com/matthewstory/), had enough and [thewritestuff.js](https://github.com/tablet/thewritestuff) emerged. A js library that wrestles `document.write` and wins. Though not necessarily a good idea, this has been in use without (significant) issue on [tablethotels.com](http://www.tablethotels.com) for several years.
 
 thewritestuff.js allows you turn [this](/examples/tws/wrongstuff.html):
 
