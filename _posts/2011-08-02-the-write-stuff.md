@@ -47,6 +47,6 @@ to [this](/examples/tws/writestuff.html):
 
 Throw further `<script>`'s inside the `document.write`'s, [and it still has the right stuff](/examples/tws/writestuff-2.html). And finally, [the ability to target multiple dom elements](/examples/tws/writestuff-3.html).
 
-It works by overwriting `document.write`, storing the strings sent to the function in an array that serves as a queue of "stuff to be `write`n. Any `<script>` elements that would be written in one of these strings is appended to the targeted element, the result is captured and it's place in the "stuff to be `write`n to the targeted element is replaced by the output. When there are no more `<script>`s left, the string is finally written/appended to the original targeted element.
+It works by overwriting `document.write`, storing the strings sent to the function in an array that serves as a queue of "stuff to be `write`n". Any `<script>` elements that would be written in one of these strings is appended to the targeted element, the result is captured and it's place in the "stuff to be `write`n" to the targeted element is replaced by the output. When there are no more `<script>`s left, the string is finally written/appended to the original targeted element.
 
 I'm entertained by the utility, ugliness, and uniqueness of this solution to a difficult problem. Cheers to entertaining javascript!
