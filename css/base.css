@@ -25,6 +25,9 @@ article {
 article pre {
     overflow:auto;
 }
+ul {
+    padding:0 0 0 1em;
+}
 a, a:visited {
     color:#006080;
 }
