@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+        <head>
+        <title>dan, of ames - experiments - live chat links</title>
+        <script src="js/app.js"></script>
+        <link rel="stylesheet" href="/css/base.css" type="text/css" />
+        <style>
+            body {
+                width:520px; margin:80px auto;
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+            Testing grounds for "modular" javascript approach.
+            <a href="/2012/01/06/experiment-in-scalable-js.html">
+            See this post for some background</a>.
+        </p>
+        <p>
+            Base framework on this page is <a href="http://jquery.com/">jQuery</a>.
+            <a href="p.html">Also works</a> with the prototype framework.
+        </p>
+        <p>
+            Slab is a completely fictional company in the travel industry that has
+            chosen to use Live Chat from <a href="http://www.liveperson.com/">LivePerson</a>
+            to connect with customers. There are any number of links on a page to open the
+            chat window, which should only be activated when Slab's travel specialists
+            are ready to chat in the Live Chat system.
+        </p>
+        <p>
+            Live Chat has pre-built buttons that handle this behavior, but they are
+            ugly, and no reasonable person would want to include them on a well
+            designed website. To get the online status of the travel specialists,
+            Slab developers activate Live Chat's buttons in a hidden &lt;div&gt;
+            and read the content to decide whether to show the site's custom links
+            that open the Live Chat window.
+        </p>
+        <p>
+            If working, and Slab travel specialists are online, a "Chat now" link
+            should appear below.
+        </p>
+        <p id="livechat" style="display:none;">
+            Slab travel specialists are eager to help,
+            <a href="chat.html?buttonid=12">Chat now</a>
+            <script>
+                Slab.App.register('livechat-link', 'Slab.Modules.livechat_link', {
+                    container:'#livechat'
+                });
+            </script>
+        </p>
+        <p id="livechat-status-report" style="display:none;">
+            <!-- additional module thrown together in 15 minutes to show status
+            if it was offline. -->
+            Slab travel specialists are out to lunch or something.
+            <script>
+                Slab.App.register('livechat-status-report', 'Slab.Modules.livechat_status_report', {
+                    container:'#livechat-status-report'
+                });
+            </script>
+        </p>
+        <div id="livechat-status" style="display:none;"
+            data-status-src="js/chat-button.js">
+            <script>
+                Slab.App.register('livechat-status', 'Slab.Modules.livechat_status', {
+                    container:'#livechat-status',
+                    config:{account:823488123458,team:"Slab-Team",button:14}
+                });
+            </script>
+        </div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="js/offloadedjavascript.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/sandbox.js"></script>
+        <script src="js/modules/livechat.js"></script>
+        <script>
+            Slab.App.init();
+        </script>
+    </body>
+</html>
