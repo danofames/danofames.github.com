@@ -40,6 +40,7 @@ Slab.App = (function() {
         }
         return o;
     };
+    // copied from http://andrewdupont.net/2009/08/28/deep-extending-objects-in-javascript/
     var extendObject = function(d, s) {
         for (var property in s) {
             if (s[property] && s[property].constructor &&
