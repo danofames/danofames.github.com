@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+    <head>
+        <title>infinite slideshow by jquery.renewal, danofames' fork</title>
+        <link rel="stylesheet" href="/css/base.css" type="text/css" />
+        <link rel="stylesheet" href="css/slideshow.css" />
+    </head>
+    <div class="slideshow">
+        <ul>
+            <li><img src="http://media.danmarvelo.us/31461.jpg" /></li>
+            <li><img src="http://media.danmarvelo.us/31481.jpg" /></li>
+            <li><img src="http://media.danmarvelo.us/31501.jpg" /></li>
+        </ul>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="js/jquery.renewal.js"></script>
+    <script>
+    $(document).ready(function() {
+        (function(container) {
+            var carousel = container.find('ul');
+            carousel.renewal({
+                speed:200,
+                circular:true,
+                moveStyle:function(oldPosition, newPosition, size, itemWidth, defaultStyle) {
+                    if (oldPosition == 0 && newPosition == size - 1) {
+                        // going from first slide to last slide
+                        return {
+                            left:'0px'
+                        }
+                    }
+                    else if (oldPosition === size - 1 && newPosition === 0) {
+                        // going from last slide to first slide
+                        return {
+                            left:'-' + itemWidth * size + 'px'
+                        }
+                    }
+                    return defaultStyle;
+                }
+            });
+            $(carousel).bind('renewal.moving', function (ev, oldPosition, newPosition) {
+                var carousel = $(this).data('carousel');
+                if (oldPosition == 0 && newPosition == carousel.size() - 1) {
+                    // going from first slide to last slide
+                    var itemWidth = carousel.getItemWidth(1);
+                    // make space to the left of the first slide
+                    $(this).css({
+                        paddingLeft:itemWidth + 'px',
+                        left:'-' + itemWidth + 'px'
+                    });
+                    // put last slide there
+                    $(carousel.getItems()[newPosition]).css({
+                        position:'absolute',
+                        left:'0px'
+                    });
+                }
+                else if (oldPosition === carousel.size() - 1 && newPosition === 0) {
+                    // going from last slide to first slide
+                    // make space to the right of the last slide
+                    $(this).css({
+                        paddingLeft:carousel.getItemWidth(1) + 'px'
+                    });
+                    // put last slide there
+                    $(carousel.getItems()[newPosition]).css({
+                        position:'absolute',
+                        right:'0px'
+                    });
+                }
+            });
+            $(carousel).bind('renewal.moved', function (ev) {
+                var carousel = $(this).data('carousel');
+                $(carousel.getItems()[carousel.getPosition()]).css({
+                    position:'',
+                    left:''
+                });
+                $(this).css({
+                    paddingLeft:'',
+                    left:'-' + carousel.getItemWidth(carousel.getPosition()) + 'px'
+                });
+            });
+            setInterval(function() {
+                carousel.trigger('renewal.advance');
+            }, 1000);
+        })($('.slideshow'));
+    });
+    </script>
+</html>

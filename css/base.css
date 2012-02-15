@@ -34,3 +34,9 @@ a, a:visited {
 a:hover {
     color:#0086B3;
 }
+blockquote {
+    margin:0; padding:0 12px;
+}
+blockquote p {
+    font-style:italic;
+}

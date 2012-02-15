@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <head>
+        <title>infinite slideshow by jquery.flexslider</title>
+        <link rel="stylesheet" href="/css/base.css" type="text/css" />
+        <link rel="stylesheet" href="css/slideshow.css" />
+    </head>
+    <div class="slideshow">
+        <ul class="slides">
+            <li><img src="http://media.danmarvelo.us/31471.jpg" /></li>
+            <li><img src="http://media.danmarvelo.us/31481.jpg" /></li>
+            <li><img src="http://media.danmarvelo.us/31501.jpg" /></li>
+        </ul>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="js/jquery.flexslider.js"></script>
+    <script>
+    $(document).ready(function() {
+        (function(container) {
+            container.flexslider({
+                slideshowSpeed: 1000,
+                animationDuration: 200,
+                animation: "slide",
+                directionNav:false,
+                controlNav:false,
+                animationLoop: true,
+                slideshow:true
+            });
+        })($('.slideshow'));
+    });
+    </script>
+</html>
