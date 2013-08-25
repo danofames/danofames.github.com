@@ -1,1 +1,0 @@
-document.write('<p><a href="http://www.tablethotels.com/"><img src="img/36800_5.jpg" /></a></p>');
